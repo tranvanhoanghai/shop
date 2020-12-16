@@ -1,0 +1,99 @@
+
+body{background: #fafafa;}
+
+
+
+
+
+
+#app .navbar{
+	position: relative;
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#nav-icon1 span{
+    background: white;
+}
+
+main{
+
+	position: relative;
+}
+
+.checkout{
+
+}
+
+.checkout label{
+	margin-bottom: 0;
+	font-size: 15px !important;
+}
+.checkout input[type=radio]{
+	/* width: 100%; */
+}
+
+.radio-wrapper{
+	display: table;
+    box-sizing: border-box;
+    width: 100%;
+	zoom: 1;
+	border: 1px solid #ddd;
+}
+
+
+.radio-input{
+	display: table-cell;
+    padding-right: 0.75em;
+    white-space: nowrap;
+}
+
+.radio-label{
+	display: table-cell;
+    width: 100%;
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 1.3em;
+}
+
+.radio-label-primary{
+	display: table-cell;
+    width: 100%;
+}
+
+.radio-accessory{
+	display: table-cell;
+    padding-left: 0.75em;
+    white-space: nowrap;
+}
+.hidden{
+	display:none;
+}
+button{
+	border: none;
+	outline: none;
+	background: black;
+	color: white;	
+	padding: 10px 30px;
+	border-radius: 3px;;
+	
+}
+.product-table .td-img{
+	width: 70px;
+}
+.product-table img{
+	width: 100%;;
+}
+th, td{
+	border: none !important;
+}
+
+footer{
+	display:none;
+}
+
+@media screen and (max-width: 955px){
+	#app img {
+	  width:  60%;
+	}
+  }

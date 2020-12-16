@@ -1,0 +1,624 @@
+body {
+    position: relative;
+    background: white;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    list-style: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.load {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    background: white;
+    display: flex;
+}
+
+#app {
+    position: relative;
+}
+
+#app img {
+    width: 50%;
+}
+
+#app a {
+    color: white;
+    font-size: 15px;
+}
+
+#app .navbar {
+    padding: 20px 1px;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 2s;
+    width: 100%;
+    top: 0;
+}
+
+.navbar-collapse {
+    padding: 0 20px;
+}
+
+.navbar-nav li .active {
+    background: white;
+    height: 2px;
+    width: 0%;
+    transition: 1s;
+}
+
+.navbar-nav li:hover .active {
+    width: 100%;
+    transition: .5s;
+}
+
+.nav-item {
+    padding: 0 5px;
+}
+
+
+/* Icon 1 menu*/
+
+#nav-icon1 {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+#nav-icon1 span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+    top: 10px;
+}
+
+#nav-icon1 span:nth-child(2) {
+    top: 22px;
+}
+
+#nav-icon1 span:nth-child(3) {
+    top: 35px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+    top: 18px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.i a i {
+    transition: .5s;
+}
+
+.i:hover i {
+    transform: rotate(-90deg);
+    transition: .5s;
+    ;
+}
+
+.sub-menu {
+    position: absolute;
+    top: 100px;
+    width: 200px;
+    background: white;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+}
+
+.sub-menu li {
+    margin-bottom: 20px;
+}
+
+.sub-menu a {
+    color: black !important;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#app .i:hover .sub-menu {
+    transition: .5s;
+    top: 61px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar {
+    background: black;
+    color: #787d80;
+    width: 250px;
+    height: 80vh;
+    left: 0;
+    top: 90px;
+    text-align: left;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: 2;
+    transform: rotateY(90deg) skewY(-10deg);
+    overflow: auto;
+}
+
+.sidebar.hideDown {
+    transform: rotateY(0deg) skewY(0deg);
+}
+
+.sub-menu2 {
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 5;
+}
+
+.sidebar .sidebarHeader {
+    padding: 20px 10px;
+    font-weight: 700;
+}
+
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    padding: 15px 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.5s;
+    text-transform: uppercase;
+}
+
+.sidebar ul li a:hover {
+    color: #ccc;
+}
+
+.dropdown-menu a {
+    color: black !important;
+}
+
+.fixed {
+    position: fixed !important;
+    z-index: 5;
+    background: white !important;
+    width: 100%;
+    top: 0;
+    color: black !important;
+    transition: 2s;
+}
+
+.fixed a {
+    color: black !important;
+}
+
+.f {
+    position: fixed !important;
+    width: 100%;
+    opacity: 1;
+    transition: 1s !important;
+    animation: a 1s;
+}
+
+@keyframes a {
+    from {
+        top: -100px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+.num {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+    position: absolute;
+    color: white;
+    border-radius: 100%;
+    top: -8px;
+    left: 20px;
+}
+
+.cart:hover .cart-detail {
+    transition: .5s;
+    top: 61px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*MAIN slide*/
+
+
+/* main {
+
+} */
+
+main .slide {
+    position: relative;
+}
+
+main .slide .item img {
+    height: 100vh;
+    width: 100%;
+}
+
+.owl-dots {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px !important;
+}
+
+.owl-nav span {
+    font-size: 70px;
+    position: relative;
+    top: -5px;
+}
+
+.owl-nav button.owl-prev {
+    left: 0;
+}
+
+.owl-nav button.owl-next {
+    right: 0;
+}
+
+.owl-nav button:focus {
+    outline: none;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+    background: none !important;
+    color: #111 !important;
+    text-decoration: none;
+}
+
+
+/*COLECTION ITEM*/
+
+.collection-item {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+    margin-top: 25px;
+}
+
+.collection-item img {
+    width: 100%;
+    transition: 1s;
+}
+
+.collection-item a:hover img {
+    transform: scale(1.1);
+}
+
+.collection-item a {
+    color: white;
+    display: block;
+    width: 100%;
+    font-size: 25px;
+}
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.collection-item .collection-info {
+    position: absolute;
+    width: 100%;
+    bottom: 80px;
+    z-index: 5;
+}
+
+.collection-item .collection-info a:nth-child(2) {
+    border: 1px solid white;
+    margin-top: 50px;
+}
+
+
+/*NEW PRODUCT*/
+
+
+/* .new-product{
+
+} */
+
+.new-product .item {
+    overflow: hidden;
+    transition: .6s;
+}
+
+.new-product .item .img-product {
+    overflow: hidden;
+    position: relative;
+}
+
+.img-product a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 380px;
+}
+
+.new-product .item img {
+    width: 100%;
+    transition: .5s;
+}
+
+.new-product .item:hover img {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.new-product .item .back {
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+}
+
+.new-product .item:hover .back {
+    opacity: 1;
+    transition: .8s;
+}
+
+.new-product .view {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    transition: .3s;
+    z-index: 1;
+    bottom: -50px;
+    cursor: pointer;
+}
+
+.new-product .item:hover .view {
+    bottom: 0px;
+}
+
+.new-product i {
+    color: white;
+}
+
+.new-product .info span {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.back-top {
+    position: fixed;
+    z-index: 5;
+    right: 15px;
+    bottom: 95px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-size: 15px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.mess {
+    position: fixed;
+    z-index: 6;
+    border-radius: 100%;
+    right: 35px;
+    bottom: 25px;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    width: 60px;
+    line-height: 60px;
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 1;
+    transition: 1s;
+    cursor: pointer;
+}
+
+footer {
+    background: #111;
+    margin-top: 50px;
+    color:white;
+}
+
+footer .left-footer a{
+    color: white;
+    transition: .5s;
+}
+
+footer .left-footer a:hover{
+    margin-left: 20px;
+}
+
+footer .right-footer i{
+    margin-right: 10px;
+}
+
+footer a i {
+    margin: 0 10px;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.modal .detail-info select {
+    width: 100%;
+}
+
+.modal .detail-info input {
+    width: 100%;
+}
+
+.modal .detail-info button {
+    width: 100%;
+}
+
+.modal .quantity-nav {
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.sold {
+    background: black;
+    color: white;
+    display: inline;
+    padding: 2px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .img-product a {
+        height: 315px;
+    }
+    #app .col-lg-4 a {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #app img {
+        width: 40%;
+    }
+    .img-product a {
+        height: 226px;
+    }
+    #app .col-lg-4 a {
+        text-align: center;
+        margin-right: 0;
+    }
+    main .slide .item img {
+        height: 100vh;
+        width: auto; 
+    }
+    .logo a {
+        text-align: center;
+    }
+
+    footer .left-footer{
+        text-align: center;
+        margin-bottom: 20px;;
+    }
+    
+    footer .right-footer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 574px) {
+    #app img {
+        width: 80%;
+    }
+    .img-product a {
+        height: 300px;
+    }
+}

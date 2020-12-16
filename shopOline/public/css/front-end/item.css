@@ -1,0 +1,141 @@
+#app .navbar {
+    position: relative;
+    transition: 2s;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#nav-icon1 span {
+    background: white;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery {
+    height: 650px;
+    overflow: auto;
+}
+
+.gallery .item {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.detail-info {
+    padding-top: 50px;
+}
+
+.detail-info select,
+input {
+    width: 100%;
+}
+
+.detail-info .form-control {
+    display: inline;
+    margin-bottom: 20px;
+}
+
+.detail-info button {
+    border: 1px solid;
+    background: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.detail-info .btn-2 {
+    background: black;
+    color: white;
+    padding: 7px 10px;
+}
+
+.detail-info .btn-2.hvr-bounce-to-right:before {
+    background: white;
+    color: black;
+}
+
+.btn-2:hover {
+    color: black !important;
+}
+
+.detail-info .btn-1.hvr-bounce-to-right:before {
+    background: black;
+}
+
+.input-number {
+    width: 80px;
+    padding: 0 12px;
+    vertical-align: top;
+    text-align: center;
+    outline: none;
+}
+
+.input-number,
+.input-number-decrement,
+.input-number-increment {
+    border: 1px solid #ccc;
+    height: 40px;
+    user-select: none;
+}
+
+.input-number-decrement,
+.input-number-increment {
+    display: inline-block;
+    width: 30px;
+    line-height: 38px;
+    background: #f1f1f1;
+    color: #444;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.input-number-decrement:active,
+.input-number-increment:active {
+    background: #ddd;
+}
+
+.input-number-decrement {
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.input-number-increment {
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+}
+
+.slider {
+    background: white;
+    position: fixed !important;
+    display: inline-block;
+    right: 0;
+    top: 82px;
+    height: 500px;
+    width: 380px;
+    padding: 20px;
+    z-index: 1;
+}
+
+.slide .slide-header {
+    padding: 10px;
+}
+
+.info ul li {
+    list-style: circle;
+}
+
+@media screen and (max-width: 993px) {
+    .gallery {
+        display: none;
+        ;
+    }
+}
+
+@media screen and (max-width: 500) {
+    form {
+        width: 100% !important;
+    }
+}
